@@ -1,0 +1,9 @@
+BUCKET=$1
+Echo 1.BucketName 2.Creation Date 3.Owner and ID
+aws s3api list-buckets
+Echo Total Number of Files in the bucket
+aws s3api list-objects --bucket $BUCKET --query "[length(Contents[])]"
+Echo 1.Region 2.Storage Type
+aws s3api list-objects --bucket $BUCKET --query 'Contents[].{Key: Key,StorageClass: StorageClass Region: Region LastModified: LastModified StorageClass: StorageClass}'
+Echo 1.Total size of files 2.Last modified date 3.Size Results in KB MB 
+aws s3 ls --summarize --human-readable --recursive s3://$BUCKET
