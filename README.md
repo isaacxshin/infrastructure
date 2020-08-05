@@ -13,6 +13,8 @@ The fourth command shows Total size of the files, Last modified dates, and the s
 
 # HOW TO START
 
-In this example the bucketname is testgpc 
+In this example the bucketname is testgpc, you can also specify a specific folder as well 
 
 EXAMPLE $ ./gpcscript testgpc
+
+EXAMPLE FOLDER  $ ./gpcscript testgpc/folder1
